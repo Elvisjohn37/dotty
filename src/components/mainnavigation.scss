@@ -62,11 +62,11 @@
             cursor: context-menu;
           }
 
-          // &#home {
-          //   padding: 3px;
-          //   border-radius: 5px;
-          //   background-color: darken($main-navigation-bgcolor, 10%);
-          // }
+          &#home {
+            padding: 3px;
+            border-radius: 5px;
+            background-color: darken($main-navigation-bgcolor, 10%);
+          }
         }
       }
     }

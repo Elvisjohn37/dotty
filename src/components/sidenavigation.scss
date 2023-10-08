@@ -1,5 +1,6 @@
 @import "./../scss/__main.scss";
 @import "./../scss/__colors.scss";
+@import "./../scss/__keyframes.scss";
 
 .side-navigation {
   display: flex;
@@ -25,7 +26,7 @@
           margin: 20px 0;
 
           &.active {
-            color: red;
+            
 
             &:before {
               content: "";
@@ -35,6 +36,7 @@
               width: 15px;
               height: 15px;
               transform: translate(-20%, -20%);
+              @include fadeIn(0.3s);
             }
           }
         }

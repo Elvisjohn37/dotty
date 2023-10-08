@@ -1,12 +1,11 @@
-import jQuery from 'jquery';
 import './mainlayout.scss';
-import mainnavigation from './mainnavigation';
-import sidenavigation from './sidenavigation';
-import home from '../pages/home';
-import backgroundchallenge from '../pages/backgroundchallenge';
-import solution from '../pages/solution';
-// import results from '../pages/results';
-import slideshow from '../pages/slideshow';
+import mainnavigation from 'src/components/mainnavigation';
+import sidenavigation from 'src/components/sidenavigation';
+import home from 'src/pages/home';
+import backgroundchallenge from 'src/pages/backgroundchallenge';
+import solution from 'src/pages/solution';
+// import results from 'src/pages/results';
+import slideshow from 'src/pages/slideshow';
 
 const mainlayout = () => {
     mainnavigation();

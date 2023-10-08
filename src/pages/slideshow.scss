@@ -55,8 +55,8 @@
       }
 
       .video-container {
-        border-radius: 10px;
         overflow: hidden;
+        height: 25vh;
       }
 
       .description-container {
@@ -74,6 +74,10 @@
         }
       }
     }
+  }
+
+  .active-content embed {
+    border-radius: 10px;
   }
 
   @media screen and (max-width: 1000px) {
@@ -94,14 +98,17 @@
 
       .active-content {
         width: unset;
+
+        .description-container {
+          margin: 20px 0;
+          min-height: 100px;
+        }
       }
     }
-    .description-container {
-      margin: 0;
-    }
-
+  
     .tab-container .active-content .video-container {
       margin: 0;
+      height: 25vh;
     }
   }
 }

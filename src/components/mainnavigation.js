@@ -7,7 +7,7 @@ const mainnavigation = () => {
         <div class="menu-container">
             <ul>
                 <li class="home-menu">
-                  <a class="material-symbols-outlined" href="#home">
+                  <a id="home" class="material-symbols-outlined" href="#home">
                     play_arrow
                   </a>
                 </li>   
@@ -24,8 +24,9 @@ const mainnavigation = () => {
             </dv>
         </div>
     `);
+
   setActiveMenu(location.hash || "#home");
-  $("a[href*=\\#]:not([href=\\#])").on("click", (event) => {
+  $("a[href*=\\#]").on("click", (event) => {
     let target = event.target.href.split("#");
     target = target.length > 1 ? `#${target[1]}` : "";
     if (target.length) {
