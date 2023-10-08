@@ -1,0 +1,44 @@
+@import "./../scss/__main.scss";
+@import "./../scss/__colors.scss";
+
+.side-navigation {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  justify-content: center;
+  margin-right: 20px;
+  z-index: 1;
+
+  .menu-container {
+    ul {
+      li {
+        list-style: none;
+
+        a {
+          width: 10px;
+          height: 10px;
+          background-color: $color-font;
+          border-radius: 10px;
+          display: block;
+          margin: 20px 0;
+
+          &.active {
+            color: red;
+
+            &:before {
+              content: "";
+              position: absolute;
+              border: 1px solid $color-font;
+              border-radius: 15px;
+              width: 15px;
+              height: 15px;
+              transform: translate(-20%, -20%);
+            }
+          }
+        }
+      }
+    }
+  }
+}

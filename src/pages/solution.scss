@@ -1,0 +1,37 @@
+@import "./../scss/_main.scss";
+@import "./../scss/_colors.scss";
+
+.solution {
+  height: 100vh;
+  width: 100%;
+  padding: 150px;
+  background-image: linear-gradient(#15475b, #15475b, lighten(#15475b, 10%));
+  display: flex;
+  align-items: center;
+  place-content: center;
+  flex-direction: column;
+
+  h1 {
+    text-align: center;
+  }
+
+  h1, h3 {
+    font-weight: 400;
+    color: $color-font;
+  }
+
+  .container {
+    padding-top: 40px;
+    color: darken($color-font, 20%);
+    display: flex;
+    flex-direction: row;
+
+    .column1 {
+        margin-right: 20px;
+    }
+
+    .column2 {
+        margin-left: 20px;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@import "./../scss/_main.scss";
+@import "./../scss/_colors.scss";
+@import "./../scss/_keyframes.scss";
+
+.slideshow {
+  height: 100vh;
+  width: 100%;
+  padding: 150px;
+  background-image: linear-gradient(#15475b, lighten(#15475b, 10%), #15475b);
+  color: $color-font;
+
+  .tab-container {
+    width: 1000px;
+    margin: auto;
+
+    .tabs {
+      align-items: center;
+      display: flex;
+
+      ul {
+        margin: auto;
+
+        li {
+          list-style: none;
+          display: inline-block;
+          padding: 5px 10px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: 0.3s;
+
+          &:hover {
+            background-color: darken(#15475b, 3%);
+          }
+
+          &.active {
+            background-color: darken(#15475b, 3%);
+          }
+        }
+      }
+    }
+
+    .active-content {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+      width: 100%;
+
+      .video-container,
+      .description-container {
+        margin: 20px;
+        width: 100%;
+        opacity: 0;
+        @include fadeIn;
+      }
+
+      .video-container {
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .description-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        button {
+          width: fit-content;
+          padding: 10px 30px;
+          background-color: #178bc1;
+          color: $color-font;
+          border-radius: 5px;
+          border: unset;
+        }
+      }
+    }
+  }
+}

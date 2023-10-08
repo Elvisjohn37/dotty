@@ -1,0 +1,90 @@
+@import "./../scss/__main.scss";
+@import "./../scss/__colors.scss";
+
+.main-navigation {
+  height: $mainNavigationheight;
+  width: 100%;
+  background-color: $main-navigation-bgcolor;
+  position: fixed;
+  font-size: 14px;
+  top: 0;
+  z-index: 1;
+
+  .menu-container {
+    width: 1000px;
+    height: 100%;
+    line-height: $mainNavigationheight;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      li {
+        list-style: none;
+        display: inline-block;
+        transition: 0.3s;
+        padding: 0 10px;
+        align-self: center;
+        position: relative;
+
+        &:hover a:not(.active) {
+          color: lighten($main-navigation-bgcolor, 50%);
+        }
+        &.home-menu {
+          height: -webkit-fill-available;
+          display: flex;
+          align-items: center;
+        }
+
+        a {
+          color: $color-font;
+          display: block;
+          display: flex;
+          transition: 0.3s;
+
+          &.active::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            background-color: $color-font;
+            bottom: 0;
+            height: 2px;
+            left: 0;
+          }
+
+          &#home.active {
+          }
+
+          &.active {
+            cursor: context-menu;
+          }
+
+          &#home {
+            padding: 3px;
+            border-radius: 5px;
+            background-color: darken($main-navigation-bgcolor, 10%);
+          }
+        }
+      }
+    }
+
+    .download {
+      color: $color-font;
+      margin: 8px;
+      padding: 0 5px;
+      padding-right: 15px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: darken($main-navigation-bgcolor, 10%);
+
+      a {
+        color: $color-font;
+        display: block;
+        padding-right: 5px;
+      }
+    }
+  }
+}
