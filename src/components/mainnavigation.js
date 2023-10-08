@@ -46,21 +46,20 @@ $(window).scroll(() => {
     solutionOffset = $("#solution").offset().top,
     slideshowOffset = $("#slideshow").offset().top;
 
-  const mainNavigationHeight = 50;
-
-  window.pageYOffset > mainNavigationHeight &&
-    $(`a[href*="\\#"]`).removeClass("active");
-
   if (window.pageYOffset + window.innerHeight / 2 >= slideshowOffset) {
+    $(`a[href*="\\#"]`).removeClass("active");
     $(`a[href="\\#slideshow"]`).addClass("active");
   } else if (window.pageYOffset + window.innerHeight / 2 >= solutionOffset) {
+    $(`a[href*="\\#"]`).removeClass("active");
     $(`a[href="\\#solution"]`).addClass("active");
   } else if (
     window.pageYOffset + window.innerHeight / 2 >=
     backgroundandchallengeOffset
   ) {
+    $(`a[href*="\\#"]`).removeClass("active");
     $(`a[href="\\#backgroundandchallenge"]`).addClass("active");
   } else if (window.pageYOffset + window.innerHeight / 2 >= homeOffset) {
+    $(`a[href*="\\#"]`).removeClass("active");
     $(`a[href="\\#home"]`).addClass("active");
   }
 });
