@@ -5,36 +5,36 @@ const slideShowContents = [
   {
     title: "Video",
     content: {
-      video: "https://www.youtube.com/embed/lSb1wk1VwHU",
-      description: "Every Instant Transmission Ever",
+      video: "https://www.youtube.com/embed/0BkvpEpbItI",
+      description: "Whitsunday Islands Vacation Travel Guide | Expedia",
     },
   },
   {
     title: "Photography",
     content: {
-      video: "https://www.youtube.com/embed/4dzCjVHXXTY",
-      description: "The Unexpected Final Blow on Vegeta in Dragon Ball Z: Kakarot",
+      video: "https://www.youtube.com/embed/PummPEYRWuw",
+      description: "Top 10 Things to Do in AIRLIE BEACH and the WHITSUNDAYS, Australia, 2023 | Travel Guide",
     },
   },
   {
     title: "Social",
     content: {
-      video: "https://www.youtube.com/embed/49yAIYmEEhQ",
-      description: "Is Dragon Ball Z: Kakarot The Best DBZ Game? Video Game Review",
+      video: "https://www.youtube.com/embed/lrv3Fnb97To",
+      description: "The Whitsundays From Above - 4k Cinematic Drone 90 Minutes",
     },
   },
   {
     title: "PR",
     content: {
-      video: "https://www.youtube.com/embed/Q_TZ2jFYwas",
-      description: "DRAGON BALL: The Ultimate Review",
+      video: "https://www.youtube.com/embed/Mk0nbHjnwyw",
+      description: "Atlantic Clipper - Sailing Whitsundays",
     },
   },
   {
     title: "Radio",
     content: {
-      video: "https://www.youtube.com/embed/xxA7LfYiIcA?autohide=1&autoplay=1",
-      description: "Super Dragon Ball Heroes Episode 6",
+      video: "https://www.youtube.com/embed/AYE3Es94UVM",
+      description: "Green Island Day trip from Cairns | Great Barrier Reef Snorkelling Tour, North Queensland",
     },
   },
 ];

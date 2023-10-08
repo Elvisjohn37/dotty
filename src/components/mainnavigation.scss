@@ -1,5 +1,6 @@
 @import "./../scss/__main.scss";
 @import "./../scss/__colors.scss";
+@import "./../scss/__keyframes.scss";
 
 .main-navigation {
   height: $mainNavigationheight;
@@ -51,6 +52,7 @@
             bottom: 0;
             height: 2px;
             left: 0;
+            @include fadeIn(0.3s);
           }
 
           &#home.active {

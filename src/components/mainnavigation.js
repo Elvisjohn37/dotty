@@ -40,28 +40,29 @@ const setActiveMenu = (hash) => {
   $(`ul li a[href="${hash}"]`).addClass("active");
 };
 
-$(document).ready(function () {
-  //
-  $(window).scroll(function () {
-    var homeOffset = $("#home").offset().top,
-      backgroundandchallengeOffset = $("#backgroundandchallenge").offset().top,
-      solutionOffset = $("#solution").offset().top,
-      slideshowOffset = $("#slideshow").offset().top;
+$(window).scroll(() => {
+  var homeOffset = $("#home").offset().top,
+    backgroundandchallengeOffset = $("#backgroundandchallenge").offset().top,
+    solutionOffset = $("#solution").offset().top,
+    slideshowOffset = $("#slideshow").offset().top;
 
-    const mainNavigationHeight = 50;
+  const mainNavigationHeight = 50;
 
-    window.pageYOffset > mainNavigationHeight && $(`a[href*="\\#"]`).removeClass("active");
+  window.pageYOffset > mainNavigationHeight &&
+    $(`a[href*="\\#"]`).removeClass("active");
 
-    if (window.pageYOffset + (window.innerHeight / 2) >= slideshowOffset) {
-      $(`a[href="\\#slideshow"]`).addClass("active");
-    } else if (window.pageYOffset + (window.innerHeight / 2) >= solutionOffset) {
-      $(`a[href="\\#solution"]`).addClass("active");
-    } else if (window.pageYOffset + (window.innerHeight / 2) >= backgroundandchallengeOffset) {
-      $(`a[href="\\#backgroundandchallenge"]`).addClass("active");
-    } else if (window.pageYOffset + (window.innerHeight / 2) >= homeOffset) {
-      $(`a[href="\\#home"]`).addClass("active");
-    }
-  });
+  if (window.pageYOffset + window.innerHeight / 2 >= slideshowOffset) {
+    $(`a[href="\\#slideshow"]`).addClass("active");
+  } else if (window.pageYOffset + window.innerHeight / 2 >= solutionOffset) {
+    $(`a[href="\\#solution"]`).addClass("active");
+  } else if (
+    window.pageYOffset + window.innerHeight / 2 >=
+    backgroundandchallengeOffset
+  ) {
+    $(`a[href="\\#backgroundandchallenge"]`).addClass("active");
+  } else if (window.pageYOffset + window.innerHeight / 2 >= homeOffset) {
+    $(`a[href="\\#home"]`).addClass("active");
+  }
 });
 
 export default mainnavigation;

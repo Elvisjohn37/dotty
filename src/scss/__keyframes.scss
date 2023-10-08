@@ -1,9 +1,10 @@
 
 
-@mixin fadeIn() {
+@mixin fadeIn($dur: 1s) {
     animation-name: fadeIn;
-    animation-duration: 1s;
+    animation-duration: $dur;
     animation-fill-mode: forwards;
+    opacity: 0;
 
     @keyframes fadeIn {
         from {

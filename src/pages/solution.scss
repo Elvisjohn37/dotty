@@ -38,6 +38,16 @@
   }
 
   @media screen and (max-width: 1000px) {
-    padding: 20px;
+    padding: 50px;
+
+    .container {
+      .column1 {
+        margin-right: 10px;
+      }
+
+      .column2 {
+        margin-left: 10px;
+      }
+    }
   }
 }
