@@ -8,6 +8,7 @@
   padding: 150px;
   background-image: linear-gradient(#15475b, lighten(#15475b, 10%), #15475b);
   color: $color-font;
+  display: flex;
 
   .tab-container {
     width: 1000px;
@@ -72,6 +73,34 @@
           border: unset;
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .tab-container {
+      width: 100%;
+
+      .active-content {
+        flex-direction: column;
+
+        button {
+          margin-top: 20px;
+        }
+      }
+
+      .active-content {
+        width: unset;
+      }
+    }
+    .description-container {
+      margin: 0;
+    }
+
+    .tab-container .active-content .video-container {
+      margin: 0;
     }
   }
 }

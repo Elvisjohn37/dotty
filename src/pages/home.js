@@ -6,7 +6,7 @@ const home = () => {
         <div class="video-container">
             <embed
                 src="https://www.youtube.com/embed/t7ZOWLqcrfw?autohide=1&autoplay=1"
-                width="100%" height="100%"
+                width="100%"
             >
         </div>
     `);

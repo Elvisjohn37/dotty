@@ -1,13 +1,13 @@
 import $ from "jquery";
 import "./mainnavigation.scss";
-import 'material-symbols';
+import "material-symbols";
 
 const mainnavigation = () => {
   $(".main-navigation").append(`
         <div class="menu-container">
             <ul>
                 <li class="home-menu">
-                  <a id="home" class="material-symbols-outlined" href="#home">
+                  <a class="material-symbols-outlined" href="#home">
                     play_arrow
                   </a>
                 </li>   
@@ -17,7 +17,7 @@ const mainnavigation = () => {
                 <li><a href="#slideshow">Slideshow</a></li>   
             </ul>
             <div class="download">
-              <a id="play" class="material-symbols-outlined" href="#backgroundandchallenge">
+              <a class="material-symbols-outlined" href="#backgroundandchallenge">
                 download
               </a>
               <span>Download Board</span>
@@ -40,6 +40,32 @@ const setActiveMenu = (hash) => {
   $(`ul li a[href="${hash}"]`).addClass("active");
 };
 
+$(document).ready(function () {
+  //
+  $(window).scroll(function () {
+    var homeOffset = $("#home").offset().top,
+      backgroundandchallengeOffset = $("#backgroundandchallenge").offset().top,
+      solutionOffset = $("#solution").offset().top,
+      slideshowOffset = $("#slideshow").offset().top;
+
+    const mainNavigationHeight = 50;
+
+    window.pageYOffset > mainNavigationHeight && $(`a[href*="\\#"]`).removeClass("active");
+
+    if (window.pageYOffset + (window.innerHeight / 2) >= slideshowOffset) {
+      $(`a[href="\\#slideshow"]`).addClass("active");
+    } else if (window.pageYOffset + (window.innerHeight / 2) >= solutionOffset) {
+      $(`a[href="\\#solution"]`).addClass("active");
+    } else if (window.pageYOffset + (window.innerHeight / 2) >= backgroundandchallengeOffset) {
+      $(`a[href="\\#backgroundandchallenge"]`).addClass("active");
+    } else if (window.pageYOffset + (window.innerHeight / 2) >= homeOffset) {
+      $(`a[href="\\#home"]`).addClass("active");
+    }
+  });
+});
+
 export default mainnavigation;
 
-{/* <li><a href="#resultseffectiveness">Results & Effectiveness</a></li> */}
+{
+  /* <li><a href="#resultseffectiveness">Results & Effectiveness</a></li> */
+}

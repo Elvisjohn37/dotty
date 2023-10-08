@@ -60,11 +60,11 @@
             cursor: context-menu;
           }
 
-          &#home {
-            padding: 3px;
-            border-radius: 5px;
-            background-color: darken($main-navigation-bgcolor, 10%);
-          }
+          // &#home {
+          //   padding: 3px;
+          //   border-radius: 5px;
+          //   background-color: darken($main-navigation-bgcolor, 10%);
+          // }
         }
       }
     }
@@ -84,6 +84,25 @@
         color: $color-font;
         display: block;
         padding-right: 5px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .menu-container {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    .menu-container {
+      width: 100%;
+
+      .download {
+        padding: 0 5px;
+        span {
+          display: none;
+        }
       }
     }
   }
